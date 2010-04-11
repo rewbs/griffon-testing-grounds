@@ -15,10 +15,16 @@
  * - SwingBuilder.doLater { // your code }
  * - SwingBuilder.edt { // your code }
  * - SwingUtilities.invokeLater { // your code }
+ *
+ * You can also use the following
+ * - UIThreadHelper.instance.executeAsync { // your code }
+ * - UIThreadHelper.instance.executeSync { // your code }
+ * - UIThreadHelper.instance.executeOutside { // your code }
+ * - UIThreadHelper.instance.executeFuture { // your code }
  */
 
 import groovy.swing.SwingBuilder
 import griffon.util.GriffonPlatformHelper
 
 GriffonPlatformHelper.tweakForNativePlatform(app)
-SwingBuilder.lookAndFeel('nimbus', 'mac', 'gtk', ['metal', [boldFonts: false]])
+SwingBuilder.lookAndFeel('mac', 'nimbus', 'gtk', ['metal', [boldFonts: false]])
